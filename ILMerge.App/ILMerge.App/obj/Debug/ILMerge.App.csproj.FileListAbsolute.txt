@@ -14,3 +14,12 @@ C:\Users\vincent.lee.c.flores\Desktop\ILMerge\ILMerge\ILMerge.App\ILMerge.App\ob
 C:\Users\vincent.lee.c.flores\Desktop\ILMerge.App\ILMerge.App\bin\Debug\ILMerge.App.exe.config
 C:\Users\vincent.lee.c.flores\Desktop\ILMerge.App\ILMerge.App\obj\Debug\ILMerge.App.exe
 C:\Users\vincent.lee.c.flores\Desktop\ILMerge.App\ILMerge.App\obj\Debug\ILMerge.App.pdb
+C:\Users\vincent.lee.c.flores\Desktop\GitHub\ILMerge.App\ILMerge.App\bin\Debug\ILMerge.App.exe.config
+C:\Users\vincent.lee.c.flores\Desktop\GitHub\ILMerge.App\ILMerge.App\obj\Debug\ILMerge.App.exe
+C:\Users\vincent.lee.c.flores\Desktop\GitHub\ILMerge.App\ILMerge.App\obj\Debug\ILMerge.App.pdb
+C:\Users\vincent.lee.c.flores\Desktop\GitHub\ILMerge.App\ILMerge.App\bin\Debug\ILMerge.App.exe
+C:\Users\vincent.lee.c.flores\Desktop\GitHub\ILMerge.App\ILMerge.App\bin\Debug\ILMerge.App.pdb
+C:\Users\vincent.lee.c.flores\Desktop\GitHub\ILMerge.App\ILMerge.App\obj\Debug\ILMerge.App.csprojResolveAssemblyReference.cache
+C:\Users\vincent.lee.c.flores\Desktop\GitHub\ILMerge.App\ILMerge.App\obj\Debug\ILMerge.App.frmILMerge.resources
+C:\Users\vincent.lee.c.flores\Desktop\GitHub\ILMerge.App\ILMerge.App\obj\Debug\ILMerge.App.Properties.Resources.resources
+C:\Users\vincent.lee.c.flores\Desktop\GitHub\ILMerge.App\ILMerge.App\obj\Debug\ILMerge.App.csproj.GenerateResource.Cache

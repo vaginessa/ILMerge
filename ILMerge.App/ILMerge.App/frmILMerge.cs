@@ -65,6 +65,7 @@ namespace ILMerge.App
 
         private void btnAddLibraries_Click(object sender, EventArgs e)
         {
+            //test
             Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Multiselect = true;

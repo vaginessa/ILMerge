@@ -41,22 +41,22 @@
             this.btnOutputFile = new MetroFramework.Controls.MetroButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCompressFile = new MetroFramework.Controls.MetroButton();
+            this.AdvanceGridView = new MetroFramework.Controls.MetroGrid();
+            this.btnRemoveAll = new MetroFramework.Controls.MetroButton();
             this.btnRemoveLibrary = new MetroFramework.Controls.MetroButton();
             this.btnAddLibraries = new MetroFramework.Controls.MetroButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnRemoveAll = new MetroFramework.Controls.MetroButton();
-            this.AdvanceGridView = new MetroFramework.Controls.MetroGrid();
             this.chkValue = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCompressFile = new MetroFramework.Controls.MetroButton();
             this.groupInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupOutput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdvanceGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupInput
@@ -207,48 +207,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bind virtual DLL libraries";
             // 
-            // btnRemoveLibrary
+            // btnCompressFile
             // 
-            this.btnRemoveLibrary.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.btnRemoveLibrary.Location = new System.Drawing.Point(406, 49);
-            this.btnRemoveLibrary.Name = "btnRemoveLibrary";
-            this.btnRemoveLibrary.Size = new System.Drawing.Size(85, 22);
-            this.btnRemoveLibrary.TabIndex = 7;
-            this.btnRemoveLibrary.Text = "Remove Library";
-            this.btnRemoveLibrary.UseSelectable = true;
-            this.btnRemoveLibrary.Click += new System.EventHandler(this.btnRemoveLibrary_Click);
-            // 
-            // btnAddLibraries
-            // 
-            this.btnAddLibraries.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.btnAddLibraries.Location = new System.Drawing.Point(406, 21);
-            this.btnAddLibraries.Name = "btnAddLibraries";
-            this.btnAddLibraries.Size = new System.Drawing.Size(85, 22);
-            this.btnAddLibraries.TabIndex = 5;
-            this.btnAddLibraries.Text = "Add Libraries";
-            this.btnAddLibraries.UseSelectable = true;
-            this.btnAddLibraries.Click += new System.EventHandler(this.btnAddLibraries_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ILMerge.App.Properties.Resources.bookshelf;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 21);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnRemoveAll
-            // 
-            this.btnRemoveAll.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.btnRemoveAll.Location = new System.Drawing.Point(406, 77);
-            this.btnRemoveAll.Name = "btnRemoveAll";
-            this.btnRemoveAll.Size = new System.Drawing.Size(85, 22);
-            this.btnRemoveAll.TabIndex = 8;
-            this.btnRemoveAll.Text = "Remove all";
-            this.btnRemoveAll.UseSelectable = true;
-            this.btnRemoveAll.Click += new System.EventHandler(this.btnRemoveAll_Click);
+            this.btnCompressFile.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnCompressFile.Location = new System.Drawing.Point(406, 105);
+            this.btnCompressFile.Name = "btnCompressFile";
+            this.btnCompressFile.Size = new System.Drawing.Size(89, 94);
+            this.btnCompressFile.TabIndex = 15;
+            this.btnCompressFile.Text = "Compress file";
+            this.btnCompressFile.UseSelectable = true;
+            this.btnCompressFile.Click += new System.EventHandler(this.btnCompressFile_Click);
             // 
             // AdvanceGridView
             // 
@@ -296,11 +264,55 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.AdvanceGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.AdvanceGridView.RowHeadersVisible = false;
             this.AdvanceGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.AdvanceGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.AdvanceGridView.Size = new System.Drawing.Size(356, 178);
             this.AdvanceGridView.Style = MetroFramework.MetroColorStyle.Blue;
             this.AdvanceGridView.TabIndex = 14;
+            // 
+            // btnRemoveAll
+            // 
+            this.btnRemoveAll.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnRemoveAll.Location = new System.Drawing.Point(406, 77);
+            this.btnRemoveAll.Name = "btnRemoveAll";
+            this.btnRemoveAll.Size = new System.Drawing.Size(85, 22);
+            this.btnRemoveAll.TabIndex = 8;
+            this.btnRemoveAll.Text = "Remove all";
+            this.btnRemoveAll.UseSelectable = true;
+            this.btnRemoveAll.Click += new System.EventHandler(this.btnRemoveAll_Click);
+            // 
+            // btnRemoveLibrary
+            // 
+            this.btnRemoveLibrary.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnRemoveLibrary.Location = new System.Drawing.Point(406, 49);
+            this.btnRemoveLibrary.Name = "btnRemoveLibrary";
+            this.btnRemoveLibrary.Size = new System.Drawing.Size(85, 22);
+            this.btnRemoveLibrary.TabIndex = 7;
+            this.btnRemoveLibrary.Text = "Remove Library";
+            this.btnRemoveLibrary.UseSelectable = true;
+            this.btnRemoveLibrary.Click += new System.EventHandler(this.btnRemoveLibrary_Click);
+            // 
+            // btnAddLibraries
+            // 
+            this.btnAddLibraries.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnAddLibraries.Location = new System.Drawing.Point(406, 21);
+            this.btnAddLibraries.Name = "btnAddLibraries";
+            this.btnAddLibraries.Size = new System.Drawing.Size(85, 22);
+            this.btnAddLibraries.TabIndex = 5;
+            this.btnAddLibraries.Text = "Add Libraries";
+            this.btnAddLibraries.UseSelectable = true;
+            this.btnAddLibraries.Click += new System.EventHandler(this.btnAddLibraries_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ILMerge.App.Properties.Resources.bookshelf;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 21);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
             // chkValue
             // 
@@ -315,28 +327,19 @@
             this.FileName.DataPropertyName = "FileName";
             this.FileName.HeaderText = "File name";
             this.FileName.Name = "FileName";
+            this.FileName.ReadOnly = true;
             this.FileName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.FileName.ToolTipText = "File name";
-            this.FileName.Width = 120;
+            this.FileName.Width = 190;
             // 
             // FilePath
             // 
             this.FilePath.DataPropertyName = "FilePath";
             this.FilePath.HeaderText = "File Path";
             this.FilePath.Name = "FilePath";
+            this.FilePath.ReadOnly = true;
             this.FilePath.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.FilePath.Width = 180;
-            // 
-            // btnCompressFile
-            // 
-            this.btnCompressFile.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.btnCompressFile.Location = new System.Drawing.Point(406, 105);
-            this.btnCompressFile.Name = "btnCompressFile";
-            this.btnCompressFile.Size = new System.Drawing.Size(89, 94);
-            this.btnCompressFile.TabIndex = 15;
-            this.btnCompressFile.Text = "Compress file";
-            this.btnCompressFile.UseSelectable = true;
-            this.btnCompressFile.Click += new System.EventHandler(this.btnCompressFile_Click);
+            this.FilePath.Width = 1000;
             // 
             // frmILMerge
             // 
@@ -351,6 +354,7 @@
             this.Controls.Add(this.groupInput);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(547, 438);
             this.MinimumSize = new System.Drawing.Size(547, 438);
             this.Name = "frmILMerge";
             this.Style = MetroFramework.MetroColorStyle.Red;
@@ -360,8 +364,8 @@
             this.groupOutput.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdvanceGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,10 +386,10 @@
         private MetroFramework.Controls.MetroButton btnRemoveLibrary;
         private MetroFramework.Controls.MetroButton btnRemoveAll;
         private MetroFramework.Controls.MetroGrid AdvanceGridView;
+        private MetroFramework.Controls.MetroButton btnCompressFile;
         private System.Windows.Forms.DataGridViewCheckBoxColumn chkValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
-        private MetroFramework.Controls.MetroButton btnCompressFile;
     }
 }
 

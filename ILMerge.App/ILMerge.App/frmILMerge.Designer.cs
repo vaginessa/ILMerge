@@ -50,6 +50,7 @@
             this.chkValue = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompletePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupOutput.SuspendLayout();
@@ -240,7 +241,8 @@
             this.AdvanceGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chkValue,
             this.FileName,
-            this.FilePath});
+            this.FilePath,
+            this.CompletePath});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -341,6 +343,13 @@
             this.FilePath.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.FilePath.Width = 1000;
             // 
+            // CompletePath
+            // 
+            this.CompletePath.DataPropertyName = "CompletePath";
+            this.CompletePath.HeaderText = "CompletePath";
+            this.CompletePath.Name = "CompletePath";
+            this.CompletePath.Visible = false;
+            // 
             // frmILMerge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +399,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn chkValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CompletePath;
     }
 }
 

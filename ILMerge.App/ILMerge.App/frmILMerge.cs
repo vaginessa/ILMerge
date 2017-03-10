@@ -102,7 +102,7 @@ namespace ILMerge.App
                     {
                         ApplicationName = file.Split('\\').Last();
                         DirectoryName = Path.GetDirectoryName(file);
-                        this.AdvanceGridView.Rows.Add(false,ApplicationName, DirectoryName);
+                        this.AdvanceGridView.Rows.Add(false,ApplicationName, DirectoryName,file);
                     }
                 }
                 catch (Exception ex)
@@ -128,14 +128,83 @@ namespace ILMerge.App
 
         private void btnCompressFile_Click(object sender, EventArgs e)
         {
+            if (Validation())
+            {
+                try
+                {
+                    ProcessStartInfo processStartInfo = new ProcessStartInfo("cmd.exe");
+                    processStartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                    processStartInfo.RedirectStandardInput = true;
+                    processStartInfo.RedirectStandardOutput = true;
+                    processStartInfo.UseShellExecute = false;
+                    Process process = Process.Start(processStartInfo);
 
+                    if (process != null)
+                    {
+                        
+                        //process.StandardInput.WriteLine("ILMerge.exe \"c:\\New Folder\\ILMerge.App.exe\" \"c:\\New Folder\\MetroFramework.dll\" /out:\"c:\\New Folder\\PCPFisdxdvincentndmioer.exe\" /targetplatform:\"v4,C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\"");
+                        string command = "ILMerge.exe ";
+                        command += "\"" + this.txtInputPath.Text.Trim() + "\"";
+                            for (int i = 0; i < this.AdvanceGridView.Rows.Count; i++)
+                            {
+                                command += " \"" + this.AdvanceGridView.Rows[i].Cells["CompletePath"].Value.ToString().Trim() + "\"";
+                            }
+                        command += " /out:";
+                        command += "\"" + this.txtOutputPath.Text.Trim() + "\" /targetplatform:\"v4,C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\"";
+
+                        process.StandardInput.WriteLine(@"cd C:\Program Files (x86)\Microsoft\ILMerge");
+                        process.StandardInput.WriteLine(command);
+                        process.StandardInput.Close(); 
+
+                        string outputString = process.StandardOutput.ReadToEnd();
+                        MetroFramework.MetroMessageBox.Show(this, "Merge Success!!!", "ILMerge", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+
+                }
+                catch (Exception Ex)
+                {
+                    MetroFramework.MetroMessageBox.Show(this, Ex.Message.ToString(), "ILMerge", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
         #endregion
 
         #region User-Defined Methods
-        private void Validation()
+        private bool Validation()
         {
+            bool flag = true;
+            StringBuilder builder = new StringBuilder();
+            if (!this.txtInputPath.Text.Contains(".exe"))
+            {
+                flag = false;
+                builder.Append("*** Input filename must have extension filename (.exe) \n");
+            }
+            if (!this.txtOutputPath.Text.Contains(".exe"))
+            {
+                flag = false;
+                builder.Append("*** Output filename must have extension filename (.exe) \n");
+            }
+            if (string.IsNullOrEmpty(this.txtInputPath.Text))
+            {
+                flag = false;
+                builder.Append("*** Please select your Application file. \n");
+            }
+            if (string.IsNullOrEmpty(this.txtOutputPath.Text))
+            {
+                flag = false;
+                builder.Append("*** Please select target path for Output filename \n");
+            }
+            if (this.AdvanceGridView.Rows.Count <= 0)
+            {
+                flag = false;
+                builder.Append("*** Please add DLL \n");
+            }
 
+            if(builder.ToString().Length > 0)
+                MetroFramework.MetroMessageBox.Show(this, builder.ToString(), "ILMerge", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            return flag;
         }
         #endregion
 

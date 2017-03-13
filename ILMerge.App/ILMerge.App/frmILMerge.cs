@@ -137,6 +137,7 @@ namespace ILMerge.App
                     processStartInfo.RedirectStandardInput = true;
                     processStartInfo.RedirectStandardOutput = true;
                     processStartInfo.UseShellExecute = false;
+                    processStartInfo.CreateNoWindow = true;
                     Process process = Process.Start(processStartInfo);
 
                     if (process != null)
@@ -158,7 +159,7 @@ namespace ILMerge.App
 
                         string outputString = process.StandardOutput.ReadToEnd();
                         MetroFramework.MetroMessageBox.Show(this, "Merge Success!!!", "ILMerge", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        Process.Start(Path.GetDirectoryName(this.txtOutputPath.Text.Trim()));
                     }
 
                 }
